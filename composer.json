@@ -17,8 +17,13 @@
             "Getresponse\\Sdk\\Client\\Test\\": "tests/"
         }
     },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    },
     "require": {
-        "php": ">=7.3",
+        "php": ">=8.2",
         "guzzlehttp/psr7": "^2.4.5",
         "psr/log": "^1.0 || ^2.0 || ^3.0"
     },

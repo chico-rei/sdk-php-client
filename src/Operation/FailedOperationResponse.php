@@ -34,7 +34,7 @@ class FailedOperationResponse implements OperationResponse
      * @param RequestInterface $request
      * @return static
      */
-    public static function createWithResponse(ResponseInterface $response, RequestInterface $request = null)
+    public static function createWithResponse(ResponseInterface $response, ?RequestInterface $request = null)
     {
         $newInstance = new static();
         $newInstance->response = $response;
@@ -47,7 +47,7 @@ class FailedOperationResponse implements OperationResponse
      * @param RequestInterface $request
      * @return static
      */
-    public static function createWithException(RequestException $exception, RequestInterface $request = null)
+    public static function createWithException(RequestException $exception, ?RequestInterface $request = null)
     {
         $newInstance = new static();
         $newInstance->exception = $exception;
@@ -59,7 +59,7 @@ class FailedOperationResponse implements OperationResponse
      * @param RequestInterface $request
      * @return static
      */
-    public static function createAsIncomplete(RequestInterface $request = null)
+    public static function createAsIncomplete(?RequestInterface $request = null)
     {
         $newInstance = new static();
         $newInstance->request = $request;

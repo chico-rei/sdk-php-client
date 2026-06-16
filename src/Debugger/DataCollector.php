@@ -29,7 +29,7 @@ class DataCollector
      * DataCollector constructor.
      * @param $streamReader $streamReader
      */
-    public function __construct(StreamReader $streamReader = null)
+    public function __construct(?StreamReader $streamReader = null)
     {
         if (null === $streamReader) {
             $streamReader = new JsonStreamReader();
@@ -59,8 +59,8 @@ class DataCollector
      */
     public function collectResponse(
         ResponseInterface $response,
-        RequestInterface $request = null,
-        CallInfo $info = null
+        ?RequestInterface $request = null,
+        ?CallInfo $info = null
     ) {
         if ($response->getStatusCode() >= 400) {
             $this->metrics['error_count']++;

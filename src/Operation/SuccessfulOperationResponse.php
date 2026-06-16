@@ -33,7 +33,7 @@ class SuccessfulOperationResponse implements OperationResponse
      * @param int $successCode
      * @param RequestInterface $request
      */
-    public function __construct(ResponseInterface $response, $successCode, RequestInterface $request = null)
+    public function __construct(ResponseInterface $response, $successCode, ?RequestInterface $request = null)
     {
         $this->response = $response;
         $this->successCode = (int) $successCode;

@@ -3,6 +3,7 @@ namespace {fqfn};
 use Getresponse\Sdk\Client\Test\FunctionMock\FunctionMock as FunctionMockInterface;
 
 class FunctionMock implements FunctionMockInterface {
+    private $namespace;
     private $name;
     private $callback;
     private $originCallback;

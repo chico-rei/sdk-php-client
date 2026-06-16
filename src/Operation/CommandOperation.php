@@ -52,7 +52,7 @@ abstract class CommandOperation implements Operation
      * @param array $extra
      * @return string
      */
-    protected function buildUrlQuery(UrlQuery $urlQuery = null, array $extra = [])
+    protected function buildUrlQuery(?UrlQuery $urlQuery = null, array $extra = [])
     {
         $params = [];
         if (null !== $urlQuery) {
@@ -73,7 +73,7 @@ abstract class CommandOperation implements Operation
      * @param ValueList | null $additionalFlags
      * @return array
      */
-    protected function getAdditionalFlagsParameterArray(ValueList $additionalFlags = null)
+    protected function getAdditionalFlagsParameterArray(?ValueList $additionalFlags = null)
     {
         if ($additionalFlags !== null) {
             return [

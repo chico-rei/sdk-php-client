@@ -28,7 +28,7 @@ class Logger
      * @param Call $call
      * @param CallInfo | null $info
      */
-    public function debugCall(Call $call, CallInfo $info = null)
+    public function debugCall(Call $call, ?CallInfo $info = null)
     {
         $message = $call->hasException()
             ? 'Thrown exception: ' . $call->getException()->getMessage()

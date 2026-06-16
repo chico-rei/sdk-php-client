@@ -14,7 +14,7 @@ abstract class QueryOperation implements Operation
      * @param array $extra
      * @return string
      */
-    protected function buildQueryString(SearchQuery $query = null, SortParams $sort = null, array $extra = null)
+    protected function buildQueryString(?SearchQuery $query = null, ?SortParams $sort = null, ?array $extra = null)
     {
         if ($query === null) {
             $queryArray = [];
@@ -48,7 +48,7 @@ abstract class QueryOperation implements Operation
      * @param Pagination | null $pagination
      * @return array
      */
-    protected function getPaginationParametersArray(Pagination $pagination = null)
+    protected function getPaginationParametersArray(?Pagination $pagination = null)
     {
         if ($pagination !== null) {
             return [
@@ -63,7 +63,7 @@ abstract class QueryOperation implements Operation
      * @param ValueList | null $fields
      * @return array
      */
-    protected function getFieldsParameterArray(ValueList $fields = null)
+    protected function getFieldsParameterArray(?ValueList $fields = null)
     {
         if ($fields !== null) {
             return [
@@ -77,7 +77,7 @@ abstract class QueryOperation implements Operation
      * @param ValueList | null $additionalFlags
      * @return array
      */
-    protected function getAdditionalFlagsParameterArray(ValueList $additionalFlags = null)
+    protected function getAdditionalFlagsParameterArray(?ValueList $additionalFlags = null)
     {
         if ($additionalFlags !== null) {
             return [

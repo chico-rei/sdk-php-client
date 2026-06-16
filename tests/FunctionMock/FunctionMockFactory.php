@@ -16,7 +16,7 @@ class FunctionMockFactory
      * @param callable|null $callback
      * @return FunctionMock
      */
-    public static function create($namespace, $name, callable $callback = null)
+    public static function create($namespace, $name, ?callable $callback = null)
     {
         $fullyQualifiedName = $namespace . '\\' . $name;
         $parameterBuilder = new ParameterBuilder();

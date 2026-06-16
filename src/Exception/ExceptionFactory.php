@@ -25,7 +25,7 @@ class ExceptionFactory
         $message,
         array $handlerInfo,
         $clientVersion,
-        ResponseInterface $response = null
+        ?ResponseInterface $response = null
     ) {
         if ($httpStatusCode === ConnectException::CODE) {
             return new ConnectException($message, $request, $handlerInfo, $clientVersion, $response);

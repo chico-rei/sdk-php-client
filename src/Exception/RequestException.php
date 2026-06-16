@@ -49,7 +49,7 @@ class RequestException extends BaseException
         RequestInterface $request,
         array $handlerInfo,
         $clientVersion,
-        ResponseInterface $response = null
+        ?ResponseInterface $response = null
     ) {
         $this->request = $request;
         $this->response = $response;
@@ -65,7 +65,7 @@ class RequestException extends BaseException
      * @param ResponseInterface | null $response
      * @return string
      */
-    public function getBaseMessage(ResponseInterface $response = null)
+    public function getBaseMessage(?ResponseInterface $response = null)
     {
         $responseCode = $response !== null ? $response->getStatusCode() : 0;
         return 'Request error, response code: ' . $responseCode . ', ' . $this->getExceptionSpecificMessage() . '. ';

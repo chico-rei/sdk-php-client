@@ -1,3 +1,4 @@
 vendor
 composer.lock
 humbuglog.txt
+.phpunit.result.cache
