@@ -81,7 +81,6 @@ class CurlMultiRequestHandler extends CurlRequestHandler
             $this->getLogger()->debugCall($call, $info);
         
             curl_multi_remove_handle($multiHandle, $handle);
-            curl_close($handle);
         }
         curl_multi_close($multiHandle);
     }

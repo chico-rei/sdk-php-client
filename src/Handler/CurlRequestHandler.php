@@ -77,7 +77,6 @@ class CurlRequestHandler implements RequestHandler
         }
     
         $info = CurlCallInfoFactory::createFromInfo(curl_getinfo($curlHandle));
-        curl_close($curlHandle);
 
         $this->getLogger()->debugCall($call, $info);
     }
@@ -110,8 +109,6 @@ class CurlRequestHandler implements RequestHandler
             $info = CurlCallInfoFactory::createFromInfo(curl_getinfo($curlHandle));
             $this->getLogger()->debugCall($call, $info);
         }
-
-        curl_close($curlHandle);
     }
     
     /**
